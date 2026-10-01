@@ -1,0 +1,942 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA Shop - Boutique en ligne</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+                NOVA<span>.</span>
+            </a>
+
+            <nav class="nav" id="nav">
+
+                <a href="#accueil">Accueil</a>
+                <a href="#boutique">Boutique</a>
+                <a href="#nouveautes">Nouveautés</a>
+                <a href="#apropos">À propos</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="icon-btn" id="searchBtn">
+                    🔍
+                </button>
+
+                <button class="icon-btn" id="favoriteBtn">
+                    ♡
+                </button>
+
+                <button class="cart-btn" id="cartBtn">
+                    🛒
+                    <span id="cartCount">0</span>
+                </button>
+
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-box" id="searchBox">
+
+        <div class="container search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Rechercher un produit..."
+            >
+
+            <button id="closeSearch">
+                ✕
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="accueil">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">
+                        NOUVELLE COLLECTION 2026
+                    </p>
+
+                    <h1>
+                        Le style qui
+                        <span>vous ressemble.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Découvrez notre sélection de vêtements et
+                        accessoires pensés pour un style moderne,
+                        simple et élégant.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#boutique" class="btn btn-dark">
+                            Découvrir la boutique
+                        </a>
+
+                        <a href="#nouveautes" class="btn btn-light">
+                            Nouveautés
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85"
+                        alt="Boutique de vêtements"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories">
+
+            <div class="container">
+
+                <div class="category-grid">
+
+                    <button class="category-card" data-category="femme">
+
+                        <div>
+                            <p>Collection</p>
+                            <h3>Femme</h3>
+                        </div>
+
+                        <span>→</span>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="homme">
+
+                        <div>
+                            <p>Collection</p>
+                            <h3>Homme</h3>
+                        </div>
+
+                        <span>→</span>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="accessoires">
+
+                        <div>
+                            <p>Collection</p>
+                            <h3>Accessoires</h3>
+                        </div>
+
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SHOP ================= -->
+
+        <section class="shop section" id="boutique">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">NOTRE SÉLECTION</p>
+
+                        <h2>
+                            Nos produits
+                        </h2>
+                    </div>
+
+                    <p>
+                        Une sélection pensée pour votre quotidien.
+                    </p>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="filters">
+
+                    <button
+                        class="filter active"
+                        data-filter="all"
+                    >
+                        Tous
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="femme"
+                    >
+                        Femme
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="homme"
+                    >
+                        Homme
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="accessoires"
+                    >
+                        Accessoires
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUCTS -->
+
+                <div class="products" id="products">
+
+
+                    <!-- PRODUCT 1 -->
+
+                    <article
+                        class="product"
+                        data-category="femme"
+                        data-name="Robe Élégante"
+                        data-price="499"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="badge">
+                                Nouveau
+                            </span>
+
+                            <button
+                                class="favorite"
+                                data-id="1"
+                            >
+                                ♡
+                            </button>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80"
+                                alt="Robe élégante"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-category">
+                                Femme
+                            </p>
+
+                            <h3>
+                                Robe Élégante
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    499 DH
+                                </strong>
+
+                                <button
+                                    class="add-cart"
+                                    data-id="1"
+                                    data-name="Robe Élégante"
+                                    data-price="499"
+                                    data-image="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80"
+                                >
+                                    Ajouter
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 2 -->
+
+                    <article
+                        class="product"
+                        data-category="homme"
+                        data-name="Veste Premium"
+                        data-price="699"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="badge sale">
+                                -20%
+                            </span>
+
+                            <button
+                                class="favorite"
+                                data-id="2"
+                            >
+                                ♡
+                            </button>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80"
+                                alt="Veste homme"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-category">
+                                Homme
+                            </p>
+
+                            <h3>
+                                Veste Premium
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    699 DH
+                                </strong>
+
+                                <button
+                                    class="add-cart"
+                                    data-id="2"
+                                    data-name="Veste Premium"
+                                    data-price="699"
+                                    data-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80"
+                                >
+                                    Ajouter
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 3 -->
+
+                    <article
+                        class="product"
+                        data-category="femme"
+                        data-name="Sac Minimal"
+                        data-price="349"
+                    >
+
+                        <div class="product-image">
+
+                            <button
+                                class="favorite"
+                                data-id="3"
+                            >
+                                ♡
+                            </button>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80"
+                                alt="Sac"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-category">
+                                Femme
+                            </p>
+
+                            <h3>
+                                Sac Minimal
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    349 DH
+                                </strong>
+
+                                <button
+                                    class="add-cart"
+                                    data-id="3"
+                                    data-name="Sac Minimal"
+                                    data-price="349"
+                                    data-image="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80"
+                                >
+                                    Ajouter
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 4 -->
+
+                    <article
+                        class="product"
+                        data-category="homme"
+                        data-name="Chemise Classique"
+                        data-price="299"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="badge">
+                                Bestseller
+                            </span>
+
+                            <button
+                                class="favorite"
+                                data-id="4"
+                            >
+                                ♡
+                            </button>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80"
+                                alt="Chemise"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-category">
+                                Homme
+                            </p>
+
+                            <h3>
+                                Chemise Classique
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    299 DH
+                                </strong>
+
+                                <button
+                                    class="add-cart"
+                                    data-id="4"
+                                    data-name="Chemise Classique"
+                                    data-price="299"
+                                    data-image="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80"
+                                >
+                                    Ajouter
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 5 -->
+
+                    <article
+                        class="product"
+                        data-category="accessoires"
+                        data-name="Montre Élégante"
+                        data-price="599"
+                    >
+
+                        <div class="product-image">
+
+                            <button
+                                class="favorite"
+                                data-id="5"
+                            >
+                                ♡
+                            </button>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80"
+                                alt="Montre"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-category">
+                                Accessoires
+                            </p>
+
+                            <h3>
+                                Montre Élégante
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    599 DH
+                                </strong>
+
+                                <button
+                                    class="add-cart"
+                                    data-id="5"
+                                    data-name="Montre Élégante"
+                                    data-price="599"
+                                    data-image="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80"
+                                >
+                                    Ajouter
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 6 -->
+
+                    <article
+                        class="product"
+                        data-category="accessoires"
+                        data-name="Lunettes Premium"
+                        data-price="249"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="badge sale">
+                                -15%
+                            </span>
+
+                            <button
+                                class="favorite"
+                                data-id="6"
+                            >
+                                ♡
+                            </button>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=80"
+                                alt="Lunettes"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-category">
+                                Accessoires
+                            </p>
+
+                            <h3>
+                                Lunettes Premium
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    249 DH
+                                </strong>
+
+                                <button
+                                    class="add-cart"
+                                    data-id="6"
+                                    data-name="Lunettes Premium"
+                                    data-price="249"
+                                    data-image="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=80"
+                                >
+                                    Ajouter
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BANNER ================= -->
+
+        <section class="promo" id="nouveautes">
+
+            <div class="container promo-container">
+
+                <div>
+
+                    <p class="eyebrow">
+                        COLLECTION 2026
+                    </p>
+
+                    <h2>
+                        Votre style.<br>
+                        Votre identité.
+                    </h2>
+
+                    <p>
+                        Découvrez les nouvelles pièces
+                        de notre collection.
+                    </p>
+
+                    <a href="#boutique" class="btn btn-dark">
+                        Acheter maintenant
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about section" id="apropos">
+
+            <div class="container about-container">
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=80"
+                        alt="Notre boutique"
+                    >
+
+                </div>
+
+                <div class="about-content">
+
+                    <p class="eyebrow">
+                        À PROPOS DE NOVA
+                    </p>
+
+                    <h2>
+                        La simplicité,
+                        avec du caractère.
+                    </h2>
+
+                    <p>
+                        NOVA est une boutique en ligne dédiée
+                        aux personnes qui recherchent des pièces
+                        modernes, élégantes et faciles à porter.
+                    </p>
+
+                    <p>
+                        Nous sélectionnons chaque produit avec
+                        attention afin de proposer une expérience
+                        simple et agréable.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="contact section" id="contact">
+
+            <div class="container contact-container">
+
+                <div class="contact-content">
+
+                    <p class="eyebrow">
+                        BESOIN D'AIDE ?
+                    </p>
+
+                    <h2>
+                        Contactez-nous
+                    </h2>
+
+                    <p>
+                        Une question concernant une commande ?
+                        Notre équipe est là pour vous aider.
+                    </p>
+
+                </div>
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        placeholder="Votre nom"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        placeholder="Votre email"
+                        required
+                    >
+
+                    <textarea
+                        placeholder="Votre message"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="btn btn-dark"
+                    >
+                        Envoyer
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= CART ================= -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart" id="cart">
+
+        <div class="cart-header">
+
+            <h2>
+                Votre panier
+            </h2>
+
+            <button id="closeCart">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+                <span>🛒</span>
+                <p>
+                    Votre panier est vide.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    0 DH
+                </strong>
+
+            </div>
+
+            <button
+                class="btn btn-dark checkout-btn"
+                id="checkoutBtn"
+            >
+                Passer la commande
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="checkout-modal">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+                ✕
+            </button>
+
+            <p class="eyebrow">
+                COMMANDE
+            </p>
+
+            <h2>
+                Finaliser votre commande
+            </h2>
+
+            <form id="checkoutForm">
+
+                <input
+                    type="text"
+                    placeholder="Nom complet"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    placeholder="Téléphone"
+                    required
+                >
+
+                <input
+                    type="text"
+                    placeholder="Adresse de livraison"
+                    required
+                >
+
+                <select required>
+
+                    <option value="">
+                        Mode de paiement
+                    </option>
+
+                    <option>
+                        Paiement à la livraison
+                    </option>
+
+                    <option>
+                        Carte bancaire
+                    </option>
+
+                </select>
+
+                <button
+                    type="submit"
+                    class="btn btn-dark"
+                >
+                    Confirmer la commande
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div>
+
+                <a href="#" class="logo">
+                    NOVA<span>.</span>
+                </a>
+
+                <p>
+                    Votre boutique, votre style.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <div>
+                    <h4>Boutique</h4>
+                    <a href="#boutique">Produits</a>
+                    <a href="#nouveautes">Nouveautés</a>
+                </div>
+
+                <div>
+                    <h4>Informations</h4>
+                    <a href="#apropos">À propos</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div>
+                    <h4>Suivez-nous</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 NOVA. Tous droits réservés.
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
